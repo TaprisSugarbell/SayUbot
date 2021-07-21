@@ -22,10 +22,17 @@ class Youtube:
         if _ext == "unknown_video":
             _ext = "mp4"
         # Options + Download
-        options = {"format": "best",
-                   "outtmpl": out + _title + "." + _ext}
-        with youtube_dl.YoutubeDL(options) as ydl:
-            ydl.download([url])
+        try:
+            options = {"format": "bestvideo+bestaudio",
+                       "outtmpl": out + _title + "." + _ext}
+            with youtube_dl.YoutubeDL(options) as ydl:
+                ydl.download([url])
+        except Exception as e:
+            print(e)
+            options = {"format": "bestł",
+                       "outtmpl": out + _title + "." + _ext}
+            with youtube_dl.YoutubeDL(options) as ydl:
+                ydl.download([url])
         return out + _title + "." + _ext
 
     def thumb(self):
