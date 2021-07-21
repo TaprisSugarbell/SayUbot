@@ -15,11 +15,8 @@ async def loadPlugins():
     print(os.listdir("./"))
     path = "./SayuBot/plugins/*.py"
     files = glob.glob(path)
-    print(files)
     for name in files:
-        print(name)
         with open(name) as a:
-            print(a.name)
             patt = Path(a.name)
             plugin_name = patt.stem
             await load_plugins(plugin_name.replace(".py", ""))

@@ -13,7 +13,7 @@ async def install(event):
                 media = ok.media.document
                 print(filename)
                 # print(os.listdir("./"))
-                await SayuBot.download_file(media, "./plugins/" + filename)
+                await SayuBot.download_file(media, "./SayuBot/plugins/" + filename)
                 await event.edit("Instalando...")
                 await SayuBot.disconnect()
         except AttributeError:
