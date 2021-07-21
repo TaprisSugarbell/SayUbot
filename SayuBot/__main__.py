@@ -2,8 +2,8 @@ import glob
 import logging
 import asyncio
 from pathlib import Path
-from utils import load_plugins
 from SayuBot import SayuBot, bot
+from SayuBot.helper.utils import load_plugins
 
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
                     level=logging.WARNING)
