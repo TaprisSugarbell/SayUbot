@@ -6,9 +6,7 @@ from pathlib import Path
 
 
 async def load_plugins(plugin_name):
-    print(os.listdir("./"))
-    print(os.listdir("./plugins/"))
-    path = Path(f"./plugins/{plugin_name}.py")
+    path = Path(f"./SayuBot/plugins/{plugin_name}.py")
     name = "SayuBot.plugins.{}".format(plugin_name)
     spec = importlib.util.spec_from_file_location(name, path)
     load = importlib.util.module_from_spec(spec)
