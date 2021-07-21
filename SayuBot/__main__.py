@@ -1,3 +1,4 @@
+import os
 import glob
 import logging
 import asyncio
@@ -11,6 +12,7 @@ loop = asyncio.get_event_loop()
 
 
 async def loadPlugins():
+    print(os.listdir("./"))
     path = "./plugins/*.py"
     files = glob.glob(path)
     print(files)
