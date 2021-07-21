@@ -13,8 +13,11 @@ loop = asyncio.get_event_loop()
 async def loadPlugins():
     path = "./plugins/*.py"
     files = glob.glob(path)
+    print(files)
     for name in files:
+        print(name)
         with open(name) as a:
+            print(a.name)
             patt = Path(a.name)
             plugin_name = patt.stem
             await load_plugins(plugin_name.replace(".py", ""))
