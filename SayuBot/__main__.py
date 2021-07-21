@@ -10,14 +10,14 @@ logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s'
 loop = asyncio.get_event_loop()
 
 
-def loadPlugins():
+async def loadPlugins():
     path = "./plugins/*.py"
     files = glob.glob(path)
     for name in files:
         with open(name) as a:
             patt = Path(a.name)
             plugin_name = patt.stem
-            load_plugins(plugin_name.replace(".py", ""))
+            await load_plugins(plugin_name.replace(".py", ""))
 
     print("Se ha iniciado!")
     print("Disfrutalo! Sigueme en @SayuCodez")
@@ -27,7 +27,7 @@ async def SayuStart():
     print("Iniciando...")
     await SayuBot.start()
     await bot.connect()
-    loadPlugins()
+    await loadPlugins()
     await SayuBot.run_until_disconnected()
     await bot.disconnect()
     print("Desconectandose...")
