@@ -12,7 +12,6 @@ loop = asyncio.get_event_loop()
 
 
 async def loadPlugins():
-    print(os.listdir("./"))
     path = "./SayuBot/plugins/*.py"
     files = glob.glob(path)
     for name in files:
