@@ -10,6 +10,7 @@ logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s'
 
 # Config
 load_dotenv()
+OWNER_ID = int(os.getenv("OWNER_ID"))
 SESSION = str(os.getenv("SESSION"))
 API_ID = int(os.getenv("API_ID"))
 API_HASH = os.getenv("API_HASH")

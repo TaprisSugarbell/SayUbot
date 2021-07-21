@@ -30,6 +30,10 @@
         "SESSION": {
             "description": "Session string",
             "value": ""
+        },
+        "OWNER_ID": {
+            "description": "Your id",
+            "value": ""
         }
     },
     "addons": [],
