@@ -29,7 +29,7 @@ class Youtube:
                 ydl.download([url])
         except Exception as e:
             print(e)
-            options = {"format": "bestł",
+            options = {"format": "best",
                        "outtmpl": out + _title + "." + _ext}
             with youtube_dl.YoutubeDL(options) as ydl:
                 ydl.download([url])
