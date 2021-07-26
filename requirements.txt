@@ -1,6 +1,8 @@
 beautifulsoup4~=4.9.3
+dnspython
 moviepy
 Pillow~=8.3.1
+pymongo
 python-dotenv~=0.18.0
 requests~=2.26.0
 telethon~=1.23.0
